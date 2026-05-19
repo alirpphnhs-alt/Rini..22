@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rini Store - Premium Apps</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <h2 class="neon-text">Rini Store</h2>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Background Animation -->
+    <div class="bg-animation">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar glass">
+        <div class="logo">
+            <i class="fa-solid fa-bolt" style="color: var(--secondary);"></i> Rini Store
+        </div>
+        <div class="nav-right">
+            <span class="status-indicator online"><i class="fa-solid fa-circle"></i> Online</span>
+            <button id="menu-btn"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="glass-panel hidden">
+        <ul>
+            <li><a href="#hero" onclick="toggleMenu()">Home</a></li>
+            <li><a href="#products" onclick="toggleMenu()">Produk</a></li>
+            <li><a href="#testimonials" onclick="toggleMenu()">Testimoni</a></li>
+            <li><a href="#footer" onclick="toggleMenu()">Kontak</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="container hero-content">
+            <div class="hero-text fade-in-up">
+                <span class="badge-promo">🔥 Promo Terbatas</span>
+                <h1>Premium Apps <br><span class="gradient-text">Murah & Bergaransi</span></h1>
+                <p>Akun legal • Fast respon • Proses cepat • Full garansi</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary glow-effect">Beli Sekarang</a>
+                    <a href="#products" class="btn btn-outline">Lihat Produk</a>
+                </div>
+                <div class="stats-row">
+                    <div class="stat-item"><strong id="online-viewers">124</strong><span>Online</span></div>
+                    <div class="stat-item"><strong>4.9/5</strong><span>Rating</span></div>
+                    <div class="stat-item"><strong>24/7</strong><span>Support</span></div>
+                </div>
+            </div>
+            <div class="hero-banner glass-panel fade-in-right">
+                <div class="slider-container" id="banner-slider">
+                    <img src="assets/banner1.jpg" alt="Banner 1" onerror="this.src='https://via.placeholder.com/600x400/1a1a2e/ffffff?text=Promo+Canva'">
+                    <img src="assets/banner2.jpg" alt="Banner 2" onerror="this.src='https://via.placeholder.com/600x400/1a1a2e/ffffff?text=Promo+Netflix'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search & Filter -->
+    <section class="filter-section container">
+        <div class="search-box glass">
+            <i class="fa-solid fa-search"></i>
+            <input type="text" id="search-input" placeholder="Cari aplikasi...">
+        </div>
+        <div class="categories" id="category-list">
+            <button class="cat-btn active" data-cat="all">Semua</button>
+            <button class="cat-btn" data-cat="streaming">Streaming</button>
+            <button class="cat-btn" data-cat="design">Design</button>
+            <button class="cat-btn" data-cat="productivity">Produktivitas</button>
+            <button class="cat-btn" data-cat="music">Musik</button>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section id="products" class="products-section container">
+        <div class="section-header">
+            <h2>Katalog Produk</h2>
+            <div class="countdown-timer">
+                <span>Berakhir dalam:</span>
+                <div id="timer">00:00:00</div>
+            </div>
+        </div>
+        <div class="product-grid" id="product-container">
+            <!-- Produk di-render JS -->
+        </div>
+    </section>
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials-section container">
+        <h2 class="text-center">Apa Kata Mereka?</h2>
+        <div class="testimonial-grid">
+            <div class="testi-card glass">
+                <div class="user-info">
+                    <img src="https://ui-avatars.com/api/?name=Budi&background=random" alt="User">
+                    <div><h4>Budi Santoso</h4><div class="stars">⭐⭐⭐⭐⭐</div></div>
+                </div>
+                <p>"Mantap bang, Netflix lancar jaya 4K. Garansi beneran!"</p>
+            </div>
+            <div class="testi-card glass">
+                <div class="user-info">
+                    <img src="https://ui-avatars.com/api/?name=Siti&background=random" alt="User">
+                    <div><h4>Siti Aminah</h4><div class="stars">⭐⭐⭐⭐⭐</div></div>
+                </div>
+                <p>"Canva Pro aman sentosa, admin fast respon banget."</p>
+            </div>
+            <div class="testi-card glass">
+                <div class="user-info">
+                    <img src="https://ui-avatars.com/api/?name=Reza&background=random" alt="User">
+                    <div><h4>Reza Rahardian</h4><div class="stars">⭐⭐⭐⭐⭐</div></div>
+                </div>
+                <p>"Harga termurah se-Indonesia, recommended seller!"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="glass-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>Rini Store</h3>
+                <p>Platform penyedia akun premium terpercaya sejak 2024.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Menu</h4>
+                <a href="#">Cara Order</a>
+                <a href="#">Syarat & Ketentuan</a>
+                <a href="#">Kebijakan Privasi</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Hubungi Kami</h4>
+                <p><i class="fa-brands fa-whatsapp"></i> +62 8xx-xxxx-xxxx</p>
+                <p><i class="fa-solid fa-envelope"></i> admin@rinistore.id</p>
+            </div>
+        </div>
+        <div class="copyright">&copy; 2026 Rini Store. All Rights Reserved.</div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/6281234567890" target="_blank" class="float-wa">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="tooltip">Chat Admin</span>
+    </a>
+
+    <!-- Payment Modal -->
+    <div id="payment-modal" class="modal hidden">
+        <div class="modal-content glass-panel">
+            <button class="close-modal">&times;</button>
+            <div class="payment-header">
+                <h3>Pembayaran QRIS</h3>
+                <span class="status-badge waiting">Menunggu Pembayaran</span>
+            </div>
+            <div class="order-summary">
+                <p id="modal-product-name">Nama Produk</p>
+                <h2 id="modal-price" class="neon-text">Rp 0</h2>
+                <small id="modal-duration">Durasi: -</small>
+            </div>
+            <div class="qris-container">
+                <img src="assets/qris.png" alt="QRIS" id="qris-image" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png'">
+                <div class="scan-overlay"><div class="scan-line"></div></div>
+            </div>
+            <div class="payment-actions">
+                <button class="btn-copy" onclick="copyText('modal-price')"><i class="fa-regular fa-copy"></i> Salin Nominal</button>
+                <div class="progress-bar-container"><div class="progress-bar" id="payment-progress"></div></div>
+                <p class="timer-text">Otomatis cek dalam <span id="countdown-pay">60</span>s</p>
+            </div>
+            <div class="manual-confirm">
+                <p>Sudah transfer tapi tidak terdeteksi?</p>
+                <button class="btn btn-success full-width" id="btn-confirm-transfer"><i class="fa-solid fa-check-circle"></i> Saya Sudah Bayar</button>
