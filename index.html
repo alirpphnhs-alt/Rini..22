@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rini Store - Premium Apps</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loadingScreen">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <h3>Memuat Rini Store...</h3>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <img src="assets/logo.png" alt="Logo">
+                    <span>Rini Store</span>
+                </div>
+                <div class="nav-menu">
+                    <a href="#" class="nav-link">Beranda</a>
+                    <a href="#produk" class="nav-link">Produk</a>
+                    <a href="#testimoni" class="nav-link">Testimoni</a>
+                    <a href="#kontak" class="nav-link">Kontak</a>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Status Online -->
+    <div class="status-bar">
+        <div class="container">
+            <div class="status-content">
+                <span class="status-online"><i class="fa fa-circle"></i> Online</span>
+                <span class="viewer-count"><i class="fa fa-eye"></i> Pengunjung: <span id="viewerCount">247</span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="bg-animation"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Premium Apps Murah & Bergaransi</h1>
+                <p class="hero-subtitle">Akun Legal • Fast Respon • Proses Cepat</p>
+                <div class="hero-buttons">
+                    <a href="#produk" class="btn btn-primary">Beli Sekarang</a>
+                    <a href="#produk" class="btn btn-secondary">Lihat Produk</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Slider -->
+    <section class="banner-section">
+        <div class="container">
+            <div class="slider-wrapper">
+                <div class="slider" id="bannerSlider">
+                    <div class="slide"><img src="assets/banner.jpg" alt="Banner"></div>
+                    <div class="slide"><img src="assets/banner.jpg" alt="Banner"></div>
+                    <div class="slide"><img src="assets/banner.jpg" alt="Banner"></div>
+                </div>
+                <div class="slider-dots" id="sliderDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kategori & Search -->
+    <section class="filter-section" id="produk">
+        <div class="container">
+            <div class="filter-wrapper">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Cari produk...">
+                    <i class="fa fa-search"></i>
+                </div>
+                <div class="category-box">
+                    <select id="categoryFilter">
+                        <option value="all">Semua Kategori</option>
+                        <option value="hiburan">Hiburan</option>
+                        <option value="alat">Alat Bantu</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produk Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid" id="productsContainer">
+
+                <!-- Produk 1 -->
+                <div class="product-card" data-category="hiburan">
+                    <div class="product-badge">Terlaris</div>
+                    <img src="assets/produk1.jpg" alt="Netflix Premium" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-name">Netflix Premium</h3>
+                        <p class="product-desc">Nonton film & serial sepuasnya kualitas 4K</p>
+                        <div class="product-price">
+                            <span class="price-old">Rp 85.000</span>
+                            <span class="price-new">Rp 25.000</span>
+                        </div>
+                        <div class="stock-info">Tersisa: <span>12</span> buah</div>
+                        <button class="btn-buy" data-product="Netflix Premium" data-price="25000">
+                            <i class="fa fa-shopping-cart"></i> Beli Sekarang
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produk 2 -->
+                <div class="product-card" data-category="hiburan">
+                    <div class="product-badge">Populer</div>
+                    <img src="assets/produk2.jpg" alt="Spotify Premium" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-name">Spotify Premium</h3>
+                        <p class="product-desc">Dengar musik tanpa iklan & bisa download</p>
+                        <div class="product-price">
+                            <span class="price-old">Rp 54.000</span>
+                            <span class="price-new">Rp 18.000</span>
+                        </div>
+                        <div class="stock-info">Tersisa: <span>23</span> buah</div>
+                        <button class="btn-buy" data-product="Spotify Premium" data-price="18000">
+                            <i class="fa fa-shopping-cart"></i> Beli Sekarang
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produk 3 -->
+                <div class="product-card" data-category="hiburan">
+                    <div class="product-badge">Terbaik</div>
+                    <img src="assets/produk3.jpg" alt="YouTube Premium" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-name">YouTube Premium</h3>
+                        <p class="product-desc">Nonton tanpa iklan & fitur latar belakang</p>
+                        <div class="product-price">
+                            <span class="price-old">Rp 60.000</span>
+                            <span class="price-new">Rp 22.000</span>
+                        </div>
+                        <div class="stock-info">Tersisa: <span>17</span> buah</div>
+                        <button class="btn-buy" data-product="YouTube Premium" data-price="22000">
+                            <i class="fa fa-shopping-cart"></i> Beli Sekarang
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produk 4 -->
+                <div class="product-card" data-category="alat">
+                    <div class="product-badge">Favorit</div>
+                    <img src="assets/produk4.jpg" alt="CapCut Pro" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-name">CapCut Pro</h3>
+                        <p class="product-desc">Edit video profesional tanpa watermark</p>
+                        <div class="product-price">
+                            <span class="price-old">Rp 75.000</span>
+                            <span class="price-new">Rp 21.000</span>
+                        </div>
+                        <div class="stock-info">Tersisa: <span>31</span> buah</div>
+                        <button class="btn-buy" data-product="CapCut Pro" data-price="21000">
+                            <i class="fa fa-shopping-cart"></i> Beli Sekarang
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produk 5 -->
+                <div class="product-card" data-category="alat">
+                    <div class="product-badge">Wajib Punya</div>
+                    <img src="assets/produk5.jpg" alt="Canva Pro" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-name">Canva Pro</h3>
+                        <p class="product-desc">Desain grafis mudah dengan elemen premium</p>
+                        <div class="product-price">
+                            <span class="price-old">Rp 90.000</span>
+                            <span class="price-new">Rp 28.000</span>
+                        </div>
+                        <div class="stock-info">Tersisa: <span>9</span> buah</div>
+                        <button class="btn-buy" data-product="Canva Pro" data-price="28000">
+                            <i class="fa fa-shopping-cart"></i> Beli Sekarang
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produk 6 -->
+                <div class="product-card" data-category="alat">
+                    <div class="product-badge">Canggih</div>
+                    <img src="assets/produk6.jpg" alt="ChatGPT Plus" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-name">ChatGPT Plus</h3>
+                        <p class="product-desc">AI pintar untuk bantu tugas & pekerjaan</p>
+                        <div class="product-price">
+                            <span class="price-old">Rp 120.000</span>
+                            <span class="price-new">Rp 45.000</span>
+                        </div>
+                        <div class="stock-info">Tersisa: <span>14</span> buah</div>
+                        <button class="btn-buy" data-product="ChatGPT Plus" data-price="45000">
+                            <i class="fa fa-shopping-cart"></i> Beli Sekarang
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimoni -->
+    <section class="testimoni-section" id="testimoni">
+        <div class="container">
+            <h2 class="section-title">Apa Kata Pembeli</h2>
+            <div class="testimoni-grid">
+                <div class="testimoni-card glass">
+                    <i class="fa fa-quote-left quote-icon"></i>
+                    <p>Proses sangat cepat, akun langsung dapat dan berfungsi. Murah banget dibanding beli resmi!</p>
+                    <div class="testimoni-author">
+                        <h4>- Sari, Surabaya</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimoni-card glass">
+                    <i class="fa fa-quote-left quote-icon"></i>
+                    <p>Respon penjual cepat sekali, pelayanan ramah. Sudah beli berkali-kali di sini, aman 100%!</p>
+                    <div class="testimoni-author">
+                        <h4>- Budi, Jakarta</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimoni-card glass">
+                    <i class="fa fa-quote-left quote-icon"></i>
+                    <p>Akunnya garansi aktif, kalau ada masalah langsung dibantu. Sangat rekomendasi!</p>
+                    <div class="testimoni-author">
+                        <h4>- Dinda, Bandung</h4>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/62895635764956" target="_blank" class="wa-float">
+        <i class="fa fa-whatsapp"></i>
+    </a>
+
+    <!-- Popup Sukses -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup glass">
+            <div class="popup-icon">
+                <i class="fa fa-check-circle"></i>
+            </div>
+            <h3>Pesanan Berhasil!</h3>
+            <p>Anda akan diarahkan ke WhatsApp untuk menyelesaikan pesanan.</p>
+            <button class="btn btn-primary close-popup">Tutup</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="kontak">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Rini Store</h3>
+                    <p>Toko terpercaya penyedia akun aplikasi premium dengan harga murah, aman, dan bergaransi resmi.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Link Cepat</h4>
+                    <a href="#">Beranda</a>
+                    <a href="#produk">Produk</a>
+                    <a href="#testimoni">Testimoni</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Kontak Kami</h4>
+                    <p><i class="fa fa-whatsapp"></i> 0895-6357-64956</p>
+                    <p><i class="fa fa-instagram"></i> @rinistore_premium</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Rini Store. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
